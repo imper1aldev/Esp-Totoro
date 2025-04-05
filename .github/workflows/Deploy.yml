@@ -1,9 +1,7 @@
 name: "Build and publish"
 
 on:
-  push:
-    tags:
-    - 'v*'
+  workflow_dispatch:
 
 env:
   INSTALLER_PATH: 'Totoro.Installer\Totoro.Installer.wixproj'
