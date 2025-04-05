@@ -8,6 +8,7 @@ env:
   MAIN_PROJECT_PATH: 'Totoro.WinUI\Totoro.WinUI.csproj'
   FFMPEG_PATH: 'Totoro.Installer\FFmpeg'
   PUBLISH_FOLDER: 'Totoro.WinUI\bin\publish'
+  BUILD_VERSION: '1.0.0'
 
 jobs:
     deploy:
@@ -30,7 +31,7 @@ jobs:
             uses: battila7/get-version-action@v2
 
         -   name: 'Build Project'
-            run: dotnet publish ${{ env.MAIN_PROJECT_PATH }} --self-contained -c Release -r win-x64 -o ${{ env.PUBLISH_FOLDER }}\ /property:BuildVersion=${{ steps.version.outputs.version-without-v }}
+            run: dotnet publish ${{ env.MAIN_PROJECT_PATH }} --self-contained -c Release -r win-x64 -o ${{ env.PUBLISH_FOLDER }}\ /property:BuildVersion=${{ env.BUILD_VERSION }}
 
         -   name: 'Copy FFMPEG'
             run: xcopy ${{ env.FFMPEG_PATH }} ${{ env.PUBLISH_FOLDER }}\FFmpeg\ /s /e /h
@@ -50,7 +51,7 @@ jobs:
                 ClientIdDiscord: ${{ secrets.DISCORD_CLIENT_ID }}
 
         -   name: 'Build Installer'
-            run: msbuild ${{ env.INSTALLER_PATH }} /property:Configuration=Release /property:BuildVersion=${{ steps.version.outputs.version-without-v }} /property:BasePath=${{ env.PUBLISH_FOLDER }}
+            run: msbuild ${{ env.INSTALLER_PATH }} /property:Configuration=Release /property:BuildVersion=${{ env.BUILD_VERSION }} /property:BasePath=${{ env.PUBLISH_FOLDER }}
   
         -   name: 'Create Release'
             id: create_release
@@ -58,8 +59,8 @@ jobs:
             env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             with:
-                tag_name: ${{ steps.version.outputs.version-without-v }}
-                release_name: ${{ steps.version.outputs.version-without-v }}
+                tag_name: ${{ env.BUILD_VERSION }}
+                release_name: ${{ env.BUILD_VERSION }}
 
         -   name: 'Add MSI to release'
             uses: csexton/release-asset-action@v2
