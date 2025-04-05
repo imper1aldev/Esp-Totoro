@@ -21,7 +21,7 @@ public class PluginManager : IPluginManager, IEnableLogger
     private readonly IPluginFactory _mangaPluginFactory;
     private readonly IPluginFactory _torrentPluginFactory;
     private readonly IPluginFactory _mediaDetectionPluginFactory;
-    private readonly string _baseUrl = "https://raw.githubusercontent.com/insomniachi/Totoro/main";
+    private readonly string _baseUrl = "https://raw.githubusercontent.com/imper1aldev/Esp-Totoro/main";
     private PluginIndex? _listedPlugins;
     private readonly bool _autoDownloadAllPlugins = true;
 

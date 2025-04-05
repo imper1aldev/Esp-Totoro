@@ -24,6 +24,11 @@
             "DisplayName": "Jellyfin",
             "Version": "1.0.0.0",
             "FileName": "Totoro.Plugins.Anime.Jellyfin.dll"
+        },
+        {
+          "DisplayName": "AnimeFlv",
+          "Version": "1.0.0.0",
+          "FileName": "Totoro.Plugins.Anime.AnimeFlv.dll"
         }
     ],
     "Manga": [
