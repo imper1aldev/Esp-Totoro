@@ -100,6 +100,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Totoro.Plugins.Anime.Anime4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totoro.Plugins.Anime.Jellyfin", "..\Plugins\Anime\Totoro.Plugins.Anime.Jellyfin\Totoro.Plugins.Anime.Jellyfin.csproj", "{06EE2EE6-C839-4AFC-BD06-8DC9C5BFB48E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totoro.Plugins.Anime.AnimeFlv", "..\Plugins\Anime\Totoro.Plugins.Anime.AnimeFlv\Totoro.Plugins.Anime.AnimeFlv.csproj", "{C6A55992-0DF5-41BA-8458-8EB41E5D88F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -252,6 +254,10 @@ Global
 		{06EE2EE6-C839-4AFC-BD06-8DC9C5BFB48E}.Debug|x64.Build.0 = Debug|x64
 		{06EE2EE6-C839-4AFC-BD06-8DC9C5BFB48E}.Release|x64.ActiveCfg = Release|x64
 		{06EE2EE6-C839-4AFC-BD06-8DC9C5BFB48E}.Release|x64.Build.0 = Release|x64
+		{C6A55992-0DF5-41BA-8458-8EB41E5D88F8}.Debug|x64.ActiveCfg = Debug|x64
+		{C6A55992-0DF5-41BA-8458-8EB41E5D88F8}.Debug|x64.Build.0 = Debug|x64
+		{C6A55992-0DF5-41BA-8458-8EB41E5D88F8}.Release|x64.ActiveCfg = Release|x64
+		{C6A55992-0DF5-41BA-8458-8EB41E5D88F8}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -295,6 +301,7 @@ Global
 		{8EA2B34E-06A4-43BB-BA0A-B83BEEAF263E} = {9F7BCE27-2A3F-4D82-8F52-903C9B356F25}
 		{1A64768D-F865-4889-8BDA-705F70000793} = {9F7BCE27-2A3F-4D82-8F52-903C9B356F25}
 		{06EE2EE6-C839-4AFC-BD06-8DC9C5BFB48E} = {9F7BCE27-2A3F-4D82-8F52-903C9B356F25}
+		{C6A55992-0DF5-41BA-8458-8EB41E5D88F8} = {9F7BCE27-2A3F-4D82-8F52-903C9B356F25}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {98BB8C58-726D-4AB8-A113-D44B55413B79}
